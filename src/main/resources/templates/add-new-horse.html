@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org" lang="en">
+<head>
+    <title>Добавить лошадь</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+
+</head>
+<body>
+<!--<header th:insert="fragments/navbar::navbar"></header>-->
+<div th:insert="fragments/navbar::navbar"></div>
+
+<div class="container mt-5 mb-5">
+    <h1>Добавить лошадь</h1>
+    <form action="/add-new-horse" method="post">
+        <input type="text" name="type" id="type" placeholder="Введите тип лошади" class="form-control" autocomplete="off"></br>
+        <div class="span1"></div>
+        <input type="number" name="age" id="age" placeholder="Введите возраст лошади" class="form-control" autocomplete="off"></br>
+        <div class="span2"></div>
+        <input type="number" name="price" id="price" placeholder="Введите цену лошади" class="form-control" autocomplete="off"></br>
+        <div class="span3"></div></br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+        <a th:href="'/all-horses'" class="btn btn-warning">Назад</a>
+    </form>
+</div>
+
+<div th:insert="fragments/footer::footer"></div>
+<script type="text/javascript" th:src="@{/js/validate.js}"></script>
+</body>
+</html>

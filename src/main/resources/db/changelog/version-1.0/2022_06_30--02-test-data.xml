@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="1" author="Kuhleuski" context="test">
+        <sql>
+            insert into horse(type, age, price)
+            values ('Каретная', 5, 400),
+                   ('Тяговая', 17, 900),
+                   ('Для скачек', 23, 2500)
+        </sql>
+    </changeSet>
+</databaseChangeLog>
